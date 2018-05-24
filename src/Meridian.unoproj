@@ -1,0 +1,22 @@
+{
+  "RootNamespace":"",
+  "Packages": [
+    "Fuse",
+    "FuseJS",
+    "Uno.Permissions"
+  ],
+  "Includes": [
+  	"Core.uno",
+    "JS.uno",
+    "AndroidSupport.uxl"
+  ],
+  "Android": {
+		"SDK": {
+			"BuildToolsVersion": "23.0.0",
+			"CompileVersion": 23,
+			"MinVersion": 23,
+			"TargetVersion": 23
+		}
+	}
+}
+

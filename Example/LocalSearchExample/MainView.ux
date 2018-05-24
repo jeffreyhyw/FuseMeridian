@@ -1,0 +1,9 @@
+<App>
+	<Panel>
+		<JavaScript>
+			var meridian = require("MeridianModule");
+
+			meridian.Log("Hello from JavaScript!");
+		</JavaScript>
+	</Panel>
+</App>
