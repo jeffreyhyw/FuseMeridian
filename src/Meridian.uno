@@ -1,20 +1,24 @@
-using Fuse;
-using Fuse.Scripting;
+using Uno.Threading;
+using Uno;
 using Uno.UX;
+using Fuse.Scripting;
 
 [UXGlobalModule]
-public class MeridianModule : NativeModule
+public class Meridian : NativeModule
 {
-	static readonly MeridianModule _instance;
+	static readonly Meridian _instance;
 	
-	public MeridianModule()
+	public Meridian()
 	{
 		// Make sure we're only initializing the module once
 		if (_instance != null) return;
 
 		_instance = this;
-		Resource.SetGlobalKey(_instance, "MeridianModule");
+		Resource.SetGlobalKey(_instance, "Meridian");
 		AddMember(new NativeFunction("Log", (NativeCallback)Log));
+
+		if defined(Android)
+			AndroidMeridian.GetPermission();
 	}
 
 	static object Log(Context c, object[] args)

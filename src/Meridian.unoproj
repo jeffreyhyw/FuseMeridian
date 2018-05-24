@@ -6,8 +6,9 @@
     "Uno.Permissions"
   ],
   "Includes": [
-  	"Core.uno",
-    "JS.uno",
+  	"*",
+    "Android/*",
+    "iOS/*",
     "AndroidSupport.uxl"
   ],
   "Android": {
